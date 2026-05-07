@@ -1,0 +1,287 @@
+
+<h2 class="sr-only">PassGig UX story — two user journeys: Emeka the youth job seeker and Mama Ngozi the trader, showing how they connect through the PassGig platform</h2>
+
+<style>
+  .pg-wrap { font-family: var(--font-sans); padding: 1.5rem 0; }
+  .chapter { margin-bottom: 2.5rem; }
+  .chapter-label { font-size: 11px; font-weight: 500; letter-spacing: 0.08em; text-transform: uppercase; color: var(--color-text-tertiary); margin-bottom: 0.4rem; }
+  .chapter-title { font-size: 18px; font-weight: 500; color: var(--color-text-primary); margin: 0 0 1rem; }
+  .beat-row { display: flex; gap: 12px; margin-bottom: 10px; align-items: flex-start; }
+  .beat-icon { width: 36px; height: 36px; border-radius: 50%; display: flex; align-items: center; justify-content: center; flex-shrink: 0; margin-top: 2px; }
+  .beat-icon i { font-size: 17px; }
+  .beat-bubble { flex: 1; background: var(--color-background-secondary); border-radius: var(--border-radius-lg); padding: 10px 14px; }
+  .beat-bubble .beat-action { font-size: 13px; font-weight: 500; color: var(--color-text-primary); margin: 0 0 2px; }
+  .beat-bubble .beat-detail { font-size: 13px; color: var(--color-text-secondary); margin: 0; line-height: 1.5; }
+  .beat-bubble .beat-screen { font-size: 12px; color: var(--color-text-tertiary); margin: 6px 0 0; display: flex; align-items: center; gap: 5px; }
+  .screen-tag { background: var(--color-background-primary); border: 0.5px solid var(--color-border-secondary); border-radius: 4px; padding: 1px 7px; font-size: 11px; color: var(--color-text-secondary); }
+  .connector { width: 1px; background: var(--color-border-tertiary); margin: 0 17px; height: 12px; }
+  .divider { border: none; border-top: 0.5px solid var(--color-border-tertiary); margin: 2rem 0; }
+  .persona-header { display: flex; align-items: center; gap: 12px; margin-bottom: 1.25rem; }
+  .avatar { width: 46px; height: 46px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 16px; font-weight: 500; flex-shrink: 0; }
+  .avatar.youth { background: #E6F1FB; color: #0C447C; }
+  .avatar.trader { background: #EAF3DE; color: #3B6D11; }
+  .persona-meta { flex: 1; }
+  .persona-name { font-size: 16px; font-weight: 500; color: var(--color-text-primary); margin: 0 0 2px; }
+  .persona-desc { font-size: 13px; color: var(--color-text-secondary); margin: 0; }
+  .moment-badge { display: inline-flex; align-items: center; gap: 5px; font-size: 11px; font-weight: 500; padding: 3px 10px; border-radius: 20px; margin-bottom: 1rem; }
+  .moment-badge.blue { background: #E6F1FB; color: #0C447C; }
+  .moment-badge.green { background: #EAF3DE; color: #3B6D11; }
+  .moment-badge.amber { background: #FAEEDA; color: #633806; }
+  .moment-badge.teal { background: #E1F5EE; color: #085041; }
+  .crossover { background: var(--color-background-secondary); border-radius: var(--border-radius-lg); border-left: 3px solid #1D9E75; padding: 14px 16px; margin: 1.5rem 0; }
+  .crossover-label { font-size: 11px; font-weight: 500; color: #0F6E56; text-transform: uppercase; letter-spacing: 0.07em; margin-bottom: 6px; }
+  .crossover-text { font-size: 14px; color: var(--color-text-primary); margin: 0; line-height: 1.6; }
+  .stat-row { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; margin: 1.25rem 0; }
+  .stat-card { background: var(--color-background-secondary); border-radius: var(--border-radius-md); padding: 12px 14px; text-align: center; }
+  .stat-val { font-size: 22px; font-weight: 500; color: var(--color-text-primary); display: block; }
+  .stat-label { font-size: 11px; color: var(--color-text-secondary); margin-top: 2px; display: block; }
+  .passport-card { background: var(--color-background-primary); border: 0.5px solid var(--color-border-tertiary); border-radius: var(--border-radius-lg); padding: 14px 16px; margin: 1rem 0; }
+  .passport-title { font-size: 12px; font-weight: 500; color: var(--color-text-tertiary); text-transform: uppercase; letter-spacing: 0.07em; margin: 0 0 10px; }
+  .passport-row { display: flex; justify-content: space-between; align-items: center; padding: 5px 0; border-bottom: 0.5px solid var(--color-border-tertiary); font-size: 13px; }
+  .passport-row:last-child { border-bottom: none; }
+  .passport-key { color: var(--color-text-secondary); }
+  .passport-val { font-weight: 500; color: var(--color-text-primary); }
+  .score-bar-wrap { display: flex; align-items: center; gap: 8px; }
+  .score-bar { height: 6px; border-radius: 3px; background: var(--color-border-tertiary); width: 80px; overflow: hidden; }
+  .score-fill { height: 100%; border-radius: 3px; background: #1D9E75; }
+  .score-num { font-size: 12px; font-weight: 500; color: #0F6E56; }
+  .system-note { display: flex; align-items: flex-start; gap: 10px; background: var(--color-background-secondary); border-radius: var(--border-radius-md); padding: 10px 13px; margin: 8px 0; }
+  .system-note i { font-size: 16px; color: var(--color-text-tertiary); margin-top: 1px; flex-shrink: 0; }
+  .system-note span { font-size: 13px; color: var(--color-text-secondary); line-height: 1.5; }
+</style>
+
+<div class="pg-wrap">
+
+  <div class="chapter">
+    <div class="chapter-label">UX story — two journeys, one platform</div>
+    <div class="chapter-title">Meet the users</div>
+
+    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 12px;">
+      <div style="background: var(--color-background-primary); border: 0.5px solid var(--color-border-tertiary); border-radius: var(--border-radius-lg); padding: 14px 16px;">
+        <div class="persona-header" style="margin-bottom: 10px;">
+          <div class="avatar youth">EO</div>
+          <div class="persona-meta">
+            <p class="persona-name">Emeka, 23</p>
+            <p class="persona-desc">Surulere, Lagos</p>
+          </div>
+        </div>
+        <p style="font-size: 13px; color: var(--color-text-secondary); margin: 0; line-height: 1.6;">Graduated one year ago. No job yet. Can do graphic design, delivery runs, and basic electrical work — but has no way to prove it or get paid reliably.</p>
+      </div>
+      <div style="background: var(--color-background-primary); border: 0.5px solid var(--color-border-tertiary); border-radius: var(--border-radius-lg); padding: 14px 16px;">
+        <div class="persona-header" style="margin-bottom: 10px;">
+          <div class="avatar trader">MN</div>
+          <div class="persona-meta">
+            <p class="persona-name">Mama Ngozi, 41</p>
+            <p class="persona-desc">Balogun Market, Lagos</p>
+          </div>
+        </div>
+        <p style="font-size: 13px; color: var(--color-text-secondary); margin: 0; line-height: 1.6;">Runs a busy fabric shop. Needs reliable delivery help 3× a week and an assistant for busy market days. Has steady cash flow but no formal credit history.</p>
+      </div>
+    </div>
+  </div>
+
+  <hr class="divider">
+
+  <div class="chapter">
+    <div class="moment-badge blue"><i class="ti ti-user-plus" aria-hidden="true"></i> Emeka's journey — getting found</div>
+
+    <div class="beat-row">
+      <div class="beat-icon" style="background: #E6F1FB;"><i class="ti ti-device-mobile" style="color: #0C447C;" aria-hidden="true"></i></div>
+      <div class="beat-bubble">
+        <p class="beat-action">Downloads PassGig, signs up</p>
+        <p class="beat-detail">Emeka finds PassGig through a WhatsApp group. He signs up with his phone number and BVN (optional). Takes 3 minutes.</p>
+        <div class="beat-screen"><i class="ti ti-layout" aria-hidden="true"></i><span class="screen-tag">Onboarding screen</span></div>
+      </div>
+    </div>
+    <div class="connector"></div>
+
+    <div class="beat-row">
+      <div class="beat-icon" style="background: #E6F1FB;"><i class="ti ti-list-check" style="color: #0C447C;" aria-hidden="true"></i></div>
+      <div class="beat-bubble">
+        <p class="beat-action">Builds his Economic Passport</p>
+        <p class="beat-detail">He selects his skills from a visual category grid: Delivery, Graphic Design, Electrical. Sets his availability — Mon to Sat, mornings. Uploads one reference photo of past work.</p>
+        <div class="beat-screen"><i class="ti ti-layout" aria-hidden="true"></i><span class="screen-tag">Passport builder screen</span></div>
+      </div>
+    </div>
+    <div class="connector"></div>
+
+    <div class="beat-row">
+      <div class="beat-icon" style="background: #EAF3DE;"><i class="ti ti-sparkles" style="color: #3B6D11;" aria-hidden="true"></i></div>
+      <div class="beat-bubble">
+        <p class="beat-action">AI generates his initial trust score</p>
+        <p class="beat-detail">The system scores him on declared data, phone verification, and location signals. No payslip or CV needed.</p>
+        <div class="passport-card">
+          <p class="passport-title">Emeka's passport — day 1</p>
+          <div class="passport-row"><span class="passport-key">Skills</span><span class="passport-val">Delivery · Design · Electrical</span></div>
+          <div class="passport-row"><span class="passport-key">Location</span><span class="passport-val">Surulere, Lagos</span></div>
+          <div class="passport-row"><span class="passport-key">Availability</span><span class="passport-val">Mon–Sat, 7am–2pm</span></div>
+          <div class="passport-row"><span class="passport-key">Gigs completed</span><span class="passport-val">0</span></div>
+          <div class="passport-row"><span class="passport-key">Trust score</span>
+            <div class="score-bar-wrap"><div class="score-bar"><div class="score-fill" style="width: 38%;"></div></div><span class="score-num">38 / 100</span></div>
+          </div>
+        </div>
+        <div class="system-note"><i class="ti ti-info-circle" aria-hidden="true"></i><span>Score is low because he's new — it will grow with every completed gig and positive rating.</span></div>
+      </div>
+    </div>
+    <div class="connector"></div>
+
+    <div class="beat-row">
+      <div class="beat-icon" style="background: #E6F1FB;"><i class="ti ti-bell" style="color: #0C447C;" aria-hidden="true"></i></div>
+      <div class="beat-bubble">
+        <p class="beat-action">Gets a match notification</p>
+        <p class="beat-detail">"A trader in Balogun needs a delivery rider tomorrow, 8am–12pm. ₦2,500." Emeka sees it as a push notification and in his feed. He taps to view the gig details.</p>
+        <div class="beat-screen"><i class="ti ti-layout" aria-hidden="true"></i><span class="screen-tag">Gig feed screen</span></div>
+      </div>
+    </div>
+  </div>
+
+  <hr class="divider">
+
+  <div class="chapter">
+    <div class="moment-badge green"><i class="ti ti-building-store" aria-hidden="true"></i> Mama Ngozi's journey — finding reliable help</div>
+
+    <div class="beat-row">
+      <div class="beat-icon" style="background: #EAF3DE;"><i class="ti ti-device-mobile" style="color: #3B6D11;" aria-hidden="true"></i></div>
+      <div class="beat-bubble">
+        <p class="beat-action">Signs up as a trader</p>
+        <p class="beat-detail">Mama Ngozi registers her business — shop name, trade type (fabric retail), location. She takes a photo of her store front as verification.</p>
+        <div class="beat-screen"><i class="ti ti-layout" aria-hidden="true"></i><span class="screen-tag">Trader onboarding screen</span></div>
+      </div>
+    </div>
+    <div class="connector"></div>
+
+    <div class="beat-row">
+      <div class="beat-icon" style="background: #EAF3DE;"><i class="ti ti-pencil" style="color: #3B6D11;" aria-hidden="true"></i></div>
+      <div class="beat-bubble">
+        <p class="beat-action">Posts her first gig</p>
+        <p class="beat-detail">She fills a simple form: task type → Delivery. Date → tomorrow. Hours → 8am to 12pm. Pay → ₦2,500. Notes → "deliver fabric bundles to 4 addresses in Yaba." Done in under 2 minutes.</p>
+        <div class="beat-screen"><i class="ti ti-layout" aria-hidden="true"></i><span class="screen-tag">Post a gig screen</span></div>
+      </div>
+    </div>
+    <div class="connector"></div>
+
+    <div class="beat-row">
+      <div class="beat-icon" style="background: #EAF3DE;"><i class="ti ti-users" style="color: #3B6D11;" aria-hidden="true"></i></div>
+      <div class="beat-bubble">
+        <p class="beat-action">Sees her matched shortlist</p>
+        <p class="beat-detail">The AI returns 5 workers ranked by skill match, proximity, score, and availability. Emeka is #2. She sees his skills, his score, his distance (4km), and 0 past gigs. She picks him anyway — his score is decent and he's closest.</p>
+        <div class="beat-screen"><i class="ti ti-layout" aria-hidden="true"></i><span class="screen-tag">Match shortlist screen</span></div>
+        <div class="system-note" style="margin-top: 8px;"><i class="ti ti-sparkles" aria-hidden="true"></i><span>AI ranked Emeka #2 based on: delivery skill match ✓ · location proximity 4km ✓ · available tomorrow 8am ✓ · passport score 38.</span></div>
+      </div>
+    </div>
+    <div class="connector"></div>
+
+    <div class="beat-row">
+      <div class="beat-icon" style="background: #FAEEDA;"><i class="ti ti-lock" style="color: #633806;" aria-hidden="true"></i></div>
+      <div class="beat-bubble">
+        <p class="beat-action">Pays into escrow via Squad</p>
+        <p class="beat-detail">She confirms Emeka and is prompted to secure the gig payment. She pays ₦2,500 into Squad escrow via her bank transfer or Squad wallet. Emeka sees "Payment secured — gig confirmed."</p>
+        <div class="beat-screen"><i class="ti ti-layout" aria-hidden="true"></i><span class="screen-tag">Payment screen (Squad API)</span></div>
+      </div>
+    </div>
+  </div>
+
+  <hr class="divider">
+
+  <div class="chapter">
+    <div class="moment-badge teal"><i class="ti ti-arrows-exchange" aria-hidden="true"></i> The crossover — gig day</div>
+
+    <div class="crossover">
+      <div class="crossover-label">What happens on the day</div>
+      <p class="crossover-text">Emeka shows up at Mama Ngozi's shop at 8am. He makes all 4 deliveries. At 12pm, Mama Ngozi opens the app, reviews the gig, and marks it complete. Squad releases ₦2,500 directly to Emeka's wallet — instantly.</p>
+    </div>
+
+    <div class="beat-row">
+      <div class="beat-icon" style="background: #EAF3DE;"><i class="ti ti-star" style="color: #3B6D11;" aria-hidden="true"></i></div>
+      <div class="beat-bubble">
+        <p class="beat-action">Both sides rate each other</p>
+        <p class="beat-detail">Mama Ngozi gives Emeka 5 stars — punctual, careful with goods. Emeka rates the gig 4 stars — clear instructions, paid fast. Both ratings are submitted.</p>
+        <div class="beat-screen"><i class="ti ti-layout" aria-hidden="true"></i><span class="screen-tag">Rating screen</span></div>
+      </div>
+    </div>
+    <div class="connector"></div>
+
+    <div class="beat-row">
+      <div class="beat-icon" style="background: #EAF3DE;"><i class="ti ti-sparkles" style="color: #3B6D11;" aria-hidden="true"></i></div>
+      <div class="beat-bubble">
+        <p class="beat-action">Both passports update automatically</p>
+        <p class="beat-detail">The system processes the completed gig, payment event, and ratings. Both profiles improve.</p>
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-top: 10px;">
+          <div class="passport-card" style="margin: 0;">
+            <p class="passport-title" style="margin-bottom: 8px;">Emeka — after gig 1</p>
+            <div class="passport-row"><span class="passport-key">Gigs</span><span class="passport-val">1 ✓</span></div>
+            <div class="passport-row"><span class="passport-key">Rating</span><span class="passport-val">5.0 ⭐</span></div>
+            <div class="passport-row"><span class="passport-key">Score</span>
+              <div class="score-bar-wrap"><div class="score-bar"><div class="score-fill" style="width: 55%;"></div></div><span class="score-num">55</span></div>
+            </div>
+          </div>
+          <div class="passport-card" style="margin: 0;">
+            <p class="passport-title" style="margin-bottom: 8px;">Mama Ngozi — after gig 1</p>
+            <div class="passport-row"><span class="passport-key">Hired</span><span class="passport-val">1 worker</span></div>
+            <div class="passport-row"><span class="passport-key">Payments</span><span class="passport-val">₦2,500 via Squad</span></div>
+            <div class="passport-row"><span class="passport-key">Score</span>
+              <div class="score-bar-wrap"><div class="score-bar"><div class="score-fill" style="width: 42%;"></div></div><span class="score-num">42</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <hr class="divider">
+
+  <div class="chapter">
+    <div class="moment-badge amber"><i class="ti ti-trending-up" aria-hidden="true"></i> Three months later — the system pays off</div>
+
+    <div class="stat-row">
+      <div class="stat-card">
+        <span class="stat-val">18</span>
+        <span class="stat-label">Emeka's gigs completed</span>
+      </div>
+      <div class="stat-card">
+        <span class="stat-val">4.8</span>
+        <span class="stat-label">Emeka's average rating</span>
+      </div>
+      <div class="stat-card">
+        <span class="stat-val">82</span>
+        <span class="stat-label">Emeka's passport score</span>
+      </div>
+    </div>
+
+    <div class="beat-row">
+      <div class="beat-icon" style="background: #E6F1FB;"><i class="ti ti-credit-card" style="color: #0C447C;" aria-hidden="true"></i></div>
+      <div class="beat-bubble">
+        <p class="beat-action">Emeka unlocks his first credit offer</p>
+        <p class="beat-detail">After 18 gigs and a score of 82, Emeka gets a notification — "You're eligible for a ₦15,000 credit line." He applies in-app. No salary slip, no guarantor. His gig history is his proof.</p>
+        <div class="beat-screen"><i class="ti ti-layout" aria-hidden="true"></i><span class="screen-tag">Financial unlocks screen</span></div>
+      </div>
+    </div>
+    <div class="connector"></div>
+
+    <div class="beat-row">
+      <div class="beat-icon" style="background: #EAF3DE;"><i class="ti ti-building-bank" style="color: #3B6D11;" aria-hidden="true"></i></div>
+      <div class="beat-bubble">
+        <p class="beat-action">Mama Ngozi qualifies for a business loan referral</p>
+        <p class="beat-detail">After 3 months of consistent Squad payments and hiring activity, her trader passport score is 71. The platform surfaces a working capital loan offer from a partner fintech — ₦150,000 at 4% monthly. The first loan she has ever been offered.</p>
+        <div class="beat-screen"><i class="ti ti-layout" aria-hidden="true"></i><span class="screen-tag">Trader financial profile screen</span></div>
+      </div>
+    </div>
+    <div class="connector"></div>
+
+    <div class="beat-row">
+      <div class="beat-icon" style="background: #EAF3DE;"><i class="ti ti-repeat" style="color: #3B6D11;" aria-hidden="true"></i></div>
+      <div class="beat-bubble">
+        <p class="beat-action">Mama Ngozi hires Emeka again — and again</p>
+        <p class="beat-detail">She saves Emeka as a "preferred worker." Now she can re-hire him with one tap, skipping the matching step entirely. The platform suggests she set up a recurring gig arrangement.</p>
+        <div class="system-note" style="margin-top: 6px;"><i class="ti ti-sparkles" aria-hidden="true"></i><span>The AI recommends Emeka consider upskilling in tailoring — there are 23 unfilled tailoring gigs near Surulere this week.</span></div>
+      </div>
+    </div>
+  </div>
+
+  <hr class="divider">
+
+  <div style="text-align: center; padding: 0.5rem 0 1rem;">
+    <p style="font-size: 13px; color: var(--color-text-tertiary); margin: 0;">PassGig · UX Story · Squad Hackathon 3.0 — Challenge 02</p>
+  </div>
+
+</div>
