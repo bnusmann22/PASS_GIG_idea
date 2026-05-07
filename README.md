@@ -100,31 +100,7 @@ PassGig is a revolutionary platform that transforms Nigeria's informal economy b
 
 ---
 
-## 🎨 **Tech Stack**
 
-### **Frontend**
-```bash
-⚡ React 19.2.5          # Modern React with concurrent features
-🔧 Vite 8.0.11          # Lightning-fast build tool
-🎨 Tailwind CSS 4.2.4   # Utility-first CSS framework
-🎭 Framer Motion 12.38.0 # Production-ready animations
-🎯 Lucide React 1.14.0  # Beautiful icons
-```
-
-### **Backend Integration**
-```bash
-💰 Squad API            # Secure payment processing
-🤖 AI/ML Engine         # Matching and credit scoring
-📱 Responsive Design    # Mobile-first approach
-```
-
----
-
-## 🚀 **Quick Start**
-
-### **Prerequisites**
-- Node.js 20+
-- npm or yarn
 
 ### **Installation**
 
@@ -222,36 +198,8 @@ graph TD
 
 ## 🎨 **Design System**
 
-### **Color Palette**
-```css
-/* Electric Blue - Primary */
---color-electric: #3b82f6;
---color-electric-light: #60a5fa;
 
-/* Neon Green - Secondary */
---color-neon: #10b981;
---color-neon-light: #34d399;
 
-/* Navy & Grays - Background */
---color-navy: #0f172a;
---color-navy-light: #1e293b;
-
-/* Glassmorphism */
---glass-bg: rgba(255, 255, 255, 0.1);
---glass-border: rgba(255, 255, 255, 0.2);
-```
-
-### **Typography**
-- **Font Family:** Inter (Google Fonts)
-- **Weights:** 300, 400, 500, 600, 700, 800, 900
-- **Features:** cv02, cv03, cv04, cv11
-
-### **Animations**
-- **Framer Motion:** Smooth, performant animations
-- **Float Animation:** 6s ease-in-out infinite
-- **Pulse Slow:** 4s cubic-bezier(0.4, 0, 0.6, 1) infinite
-
----
 
 ## 📱 **Responsive Design**
 
@@ -262,47 +210,6 @@ PassGig is built with a mobile-first approach:
 - 🖥️ **Desktop (> 1024px):** Multi-column layouts, generous spacing
 
 All components are fully responsive with optimized touch interactions.
-
----
-
-## 🤝 **Contributing**
-
-We welcome contributions! Here's how to get involved:
-
-### **Development Workflow**
-
-```bash
-# 1. Fork the repository
-# 2. Create a feature branch
-git checkout -b feature/amazing-feature
-
-# 3. Make your changes
-# 4. Run linting and tests
-npm run lint
-
-# 5. Build for production
-npm run build
-
-# 6. Commit your changes
-git commit -m "Add amazing feature"
-
-# 7. Push to your branch
-git push origin feature/amazing-feature
-
-# 8. Create a Pull Request
-```
-
-### **Code Standards**
-- 🔍 ESLint configuration for code quality
-- 🎨 Tailwind CSS for consistent styling
-- 📝 Conventional commit messages
-- 🧪 Component-based architecture
-
-### **Design Guidelines**
-- 🎯 Mobile-first responsive design
-- 🌈 Consistent color palette usage
-- 🎭 Smooth animations and transitions
-- ♿ Accessibility considerations
 
 ---
 
