@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import { Zap, Users, TrendingUp } from 'lucide-react';
+import { Zap, Users, TrendingUp, Shield } from 'lucide-react';
 
 const HeroSection = () => {
   return (
@@ -64,6 +64,10 @@ const HeroSection = () => {
             <TrendingUp className="text-electric" size={20} />
             <span className="text-electric font-medium text-sm sm:text-base">Financial Inclusion</span>
           </div>
+          <div className="flex items-center space-x-2 sm:space-x-3 bg-neon/10 backdrop-blur-sm rounded-full px-4 sm:px-6 py-2 sm:py-3 border border-neon/20 hover:bg-neon/20 transition-all duration-300">
+            <Shield className="text-neon" size={20} />
+            <span className="text-neon font-medium text-sm sm:text-base">Squad Secure Payments</span>
+          </div>
         </motion.div>
 
         <motion.div
@@ -73,8 +77,7 @@ const HeroSection = () => {
           transition={{ duration: 0.8, delay: 0.5 }}
         >
           <p className="text-lg sm:text-xl text-slate-200 leading-relaxed font-light">
-            Connecting unemployed Nigerian youth with gig opportunities from informal traders,
-            building financial identities that unlock access to credit, savings, and insurance.
+            Connecting Nigeria's 13M+ unemployed youth with 60M+ informal traders through AI-powered gig matching and economic passports. Every completed gig builds a financial identity, unlocking access to credit, savings, and insurance.
           </p>
         </motion.div>
       </div>

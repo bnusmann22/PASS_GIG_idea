@@ -1,34 +1,34 @@
 import { motion } from 'framer-motion';
-import { Shield, ArrowRight, Wallet, Database, CreditCard, User } from 'lucide-react';
+import { Shield, ArrowRight, Wallet, Database, CreditCard, User, Lock } from 'lucide-react';
 
 const SquadIntegration = () => {
   const squadFunctions = [
     {
-      title: 'Payment Escrow',
+      title: 'Payment Escrow — Trust Infrastructure',
       icon: Shield,
-      description: 'Trader deposits gig payment upfront into escrow. Funds are held until gig is marked complete.',
-      benefit: 'Protects both parties. Youth knows payment is guaranteed. Trader knows work must be delivered.',
+      description: 'Trader deposits gig payment upfront into escrow before work begins. Funds are held securely until gig completion is confirmed.',
+      benefit: 'Eliminates non-payment risk. Youth knows payment is guaranteed. Trader knows funds are reserved. Trust is baked in.',
       color: 'electric'
     },
     {
-      title: 'Worker Disbursement',
+      title: 'Instant Worker Disbursement',
       icon: Wallet,
-      description: 'On gig completion and trader confirmation, Squad releases funds directly to worker\'s account or wallet.',
-      benefit: 'Fast, reliable payment to workers — removes the \'I\'ll pay you later\' problem common in informal hiring.',
+      description: 'On gig completion and trader confirmation, Squad releases funds directly to worker\'s bank account or wallet — no delays, no "I\'ll pay you later."',
+      benefit: 'Removes the biggest pain point in informal hiring: delayed or withheld payment. Workers get paid the moment work is verified.',
       color: 'neon'
     },
     {
-      title: 'Transaction Data Feed',
+      title: 'Transaction Data Generation',
       icon: Database,
-      description: 'All payments flow through Squad, generating a structured transaction history per user.',
-      benefit: 'This transaction history is the raw data that powers the AI credit scoring model for both youth and traders.',
+      description: 'Every gig payment flows through Squad, generating a structured, verifiable transaction history for both worker and trader.',
+      benefit: 'This is the raw data that fuels the AI credit scoring engine — proof of income for workers, proof of payroll for traders.',
       color: 'electric'
     },
     {
-      title: 'Business Payments',
+      title: 'Business Payment Trail',
       icon: CreditCard,
-      description: 'Traders can use Squad to receive payments from their own customers, logged to their PassGig profile.',
-      benefit: 'Adds a broader revenue signal to the trader\'s economic passport beyond just hiring activity.',
+      description: 'Traders can use Squad to receive payments from their own customers during regular business operations, all logged to their PassGig profile.',
+      benefit: 'Adds a broader revenue signal to the trader\'s economic passport — not just hiring spend, but business income patterns.',
       color: 'neon'
     }
   ];
@@ -55,11 +55,11 @@ const SquadIntegration = () => {
             <Shield className="text-electric" size={48} />
           </div>
           <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-4 sm:mb-6 bg-gradient-to-r from-electric via-white to-neon bg-clip-text text-transparent px-4">
-            Squad API: Core of PassGig
+            Squad API: The Trust Backbone
           </h2>
           <p className="text-lg sm:text-xl text-slate-400 max-w-4xl mx-auto leading-relaxed px-4">
-            Squad API is not a token integration added at the end. It is structurally embedded into four critical
-            functions of the platform, making it central to the entire system.
+            Squad API is not a token payment integration added at the end. It is structurally embedded into four critical functions,
+            making it the operational core of PassGig's trust and data infrastructure.
           </p>
         </motion.div>
 
@@ -107,14 +107,14 @@ const SquadIntegration = () => {
         >
           <div className="flex items-center mb-4 sm:mb-6">
             <div className="p-2 sm:p-3 bg-red-500/20 rounded-2xl mr-3 sm:mr-4">
-              <ArrowRight className="text-red-400" size={20} />
+              <Lock className="text-red-400" size={20} />
             </div>
-            <h3 className="text-lg sm:text-xl lg:text-2xl font-bold text-red-300">Critical Integration Note</h3>
+            <h3 className="text-lg sm:text-xl lg:text-2xl font-bold text-red-300">Critical Integration Requirement</h3>
           </div>
           <p className="text-slate-200 leading-relaxed text-base sm:text-lg">
             <strong className="text-red-300">Disqualification warning:</strong> A solution with no meaningful Squad API integration
-            will not be eligible for top placements regardless of scores in other criteria. PassGig's
-            escrow and disbursement architecture ensures Squad is central — not cosmetic.
+            across all four functions will not be eligible for top placements. PassGig's escrow, disbursement,
+            and data-feed architecture ensures Squad is central — not cosmetic. Every gig payment must flow through Squad.
           </p>
         </motion.div>
 
@@ -126,7 +126,7 @@ const SquadIntegration = () => {
           transition={{ duration: 0.8, delay: 0.6 }}
           viewport={{ once: true }}
         >
-          <h3 className="text-lg sm:text-xl lg:text-2xl font-semibold text-slate-300 text-center mb-6">Payment Flow Architecture</h3>
+          <h3 className="text-lg sm:text-xl lg:text-2xl font-semibold text-slate-300 text-center mb-6">Complete Payment & Data Flow</h3>
           <div className="flex flex-wrap items-center justify-center gap-4 sm:gap-6 bg-white/5 backdrop-blur-xl rounded-2xl p-6 sm:p-8 border border-slate-700 mx-4">
             <div className="flex items-center space-x-4">
               <div className="flex items-center space-x-3 bg-slate-800 rounded-xl px-6 py-3 border border-slate-600">
@@ -135,8 +135,13 @@ const SquadIntegration = () => {
               </div>
               <ArrowRight className="text-slate-400" size={24} />
               <div className="flex items-center space-x-3 bg-slate-800 rounded-xl px-6 py-3 border border-slate-600">
-                <Shield className="text-neon" size={20} />
+                <Lock className="text-neon" size={20} />
                 <span className="text-neon font-semibold">Squad Escrow</span>
+              </div>
+              <ArrowRight className="text-slate-400" size={24} />
+              <div className="flex items-center space-x-3 bg-slate-800 rounded-xl px-6 py-3 border border-slate-600">
+                <Database className="text-electric" size={20} />
+                <span className="text-electric font-semibold">Data Feed</span>
               </div>
               <ArrowRight className="text-slate-400" size={24} />
               <div className="flex items-center space-x-3 bg-slate-800 rounded-xl px-6 py-3 border border-slate-600">
@@ -145,6 +150,9 @@ const SquadIntegration = () => {
               </div>
             </div>
           </div>
+          <p className="text-slate-400 text-center max-w-3xl mt-4">
+            Payment flows: Trader → Squad Escrow → Youth Worker. Data flows: Every transaction → Passport profile → Credit scoring.
+          </p>
         </motion.div>
       </div>
     </section>

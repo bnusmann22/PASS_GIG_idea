@@ -1,78 +1,78 @@
 import { motion } from 'framer-motion';
-import { User, Briefcase, Search, Shield, CheckCircle, Star } from 'lucide-react';
+import { User, Briefcase, Search, Shield, CheckCircle, Star, Lock, Database } from 'lucide-react';
 
 const EndToEndFlow = () => {
   const steps = [
     {
       step: 1,
-      actor: 'Youth',
-      action: 'Downloads PassGig app, signs up, declares skills and location',
-      system: 'AI generates initial passport score. Profile created.',
+      actor: 'Youth Worker',
+      action: 'Downloads PassGig, signs up, declares skills + location, and completes three-layer verification (BVN, NIN, Social media)',
+      system: 'AI cross-checks BVN (bank identity), NIN (government ID), and social accounts (digital footprint/social credibility). Generates initial passport trust score weighted by verification completeness.',
       icon: User,
       color: 'electric'
     },
     {
       step: 2,
       actor: 'Trader',
-      action: 'Signs up, describes business, posts a gig (e.g. \'Need delivery rider Saturday, ₦3,000\')',
-      system: 'Gig published. AI matching engine activates.',
+      action: 'Signs up, verifies business identity (BVN + NIN + business proof), posts gig (e.g., "Need delivery rider Saturday, ₦3,000")',
+      system: 'AI verifies business legitimacy. Gig published with trader\'s verified trust score visible. Matching engine activates.',
       icon: Briefcase,
       color: 'neon'
     },
     {
       step: 3,
-      actor: 'System',
-      action: 'Matching engine runs',
-      system: 'Top 5 youth workers ranked and shown to trader based on skill, location, score, availability.',
+      actor: 'AI Matching Engine',
+      action: 'Ranks all eligible youth workers by skill match, location proximity, passport score, and availability',
+      system: 'Returns top 5 ranked candidates to trader. Emeka appears at #2 — 4km away, available, passport score 38/100 (new but verified).',
       icon: Search,
       color: 'electric'
     },
     {
       step: 4,
       actor: 'Trader',
-      action: 'Reviews shortlist, selects a worker, confirms the gig',
-      system: 'Worker notified. Trader prompted to deposit ₦3,000 into Squad escrow.',
+      action: 'Reviews shortlist, selects Emeka, confirms the gig',
+      system: 'Emeka receives push notification: "Gig confirmed — ₦3,000 held in escrow." Trader is prompted to deposit payment.',
       icon: CheckCircle,
       color: 'neon'
     },
     {
       step: 5,
       actor: 'Trader',
-      action: 'Pays into escrow via Squad API',
-      system: 'Funds held securely. Worker sees \'Payment secured — gig confirmed\'.',
+      action: 'Deposits ₦3,000 into Squad escrow via bank transfer or wallet',
+      system: 'Squad API secures funds in escrow. Both parties see "Payment secured — gig active." Worker is guaranteed payment.',
       icon: Shield,
       color: 'electric'
     },
     {
       step: 6,
-      actor: 'Youth',
-      action: 'Shows up, completes delivery',
-      system: 'Trader marks gig complete on app.',
-      icon: CheckCircle,
+      actor: 'Youth Worker',
+      action: 'Shows up Saturday 8am, completes all 4 deliveries as specified',
+      system: 'Trader receives in-app notification: "Did Emeka complete the work? Mark gig complete."',
+      icon: User,
       color: 'neon'
     },
     {
       step: 7,
-      actor: 'System',
-      action: 'Squad API releases funds to worker wallet/account',
-      system: 'Worker receives payment instantly. Both parties prompted to rate each other.',
-      icon: Shield,
+      actor: 'Trader',
+      action: 'Taps "Complete" on the gig',
+      system: 'Squad API instantly releases ₦3,000 to Emeka\'s wallet/bank account. Emeka gets payment notification within seconds.',
+      icon: CheckCircle,
       color: 'electric'
     },
     {
       step: 8,
-      actor: 'Both',
-      action: 'Submit ratings',
-      system: 'AI updates both passports. Scores adjust. Transaction logged.',
+      actor: 'Both Users',
+      action: 'Rate each other (1–5 stars + optional review)',
+      system: 'Emeka rates Mama Ngozi 5 stars — clear instructions, paid fast. Mama Ngozi rates Emeka 5 stars — punctual, careful with goods. Both ratings feed passport scores.',
       icon: Star,
       color: 'neon'
     },
     {
       step: 9,
-      actor: 'System',
-      action: 'Intelligence layer analyzes data',
-      system: 'Demand signals updated. Credit eligibility recalculated. Skill recommendations refreshed.',
-      icon: Search,
+      actor: 'Platform',
+      action: 'AI updates both passports, recalculates credit eligibility',
+      system: 'Emeka\'s passport jumps to 55/100 (1 gig, 5.0 rating). Mama Ngozi\'s rises to 42/100. Transaction and rating data stored for credit modeling. System may surface skill-upgrade suggestions.',
+      icon: Database,
       color: 'electric'
     }
   ];
@@ -98,8 +98,7 @@ const EndToEndFlow = () => {
             End-to-End Gig Flow
           </h2>
           <p className="text-lg sm:text-xl text-slate-400 max-w-4xl mx-auto leading-relaxed px-4">
-            How a complete gig works from signup to payment — step by step.
-            This is the core loop that builds financial identities.
+            The complete 9-step loop from signup to financial unlock — how verification, matching, payments, and ratings build economic identity
           </p>
         </motion.div>
 
@@ -139,7 +138,7 @@ const EndToEndFlow = () => {
                     <div className="flex items-start space-x-2 sm:space-x-3">
                       <div className="w-2 h-2 bg-slate-400 rounded-full mt-1.5 sm:mt-2 flex-shrink-0"></div>
                       <p className="text-slate-300 leading-relaxed text-sm sm:text-base">
-                        <strong className="text-white">System:</strong> {step.system}
+                        <strong className="text-white">System response:</strong> {step.system}
                       </p>
                     </div>
                   </div>
@@ -159,7 +158,7 @@ const EndToEndFlow = () => {
         >
           <div className="text-center mb-8 sm:mb-10">
             <h3 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-white mb-4">
-              The Complete Feedback Loop
+              The Compounding Feedback Loop
             </h3>
             <div className="w-16 sm:w-20 lg:w-24 h-1 bg-gradient-to-r from-electric to-neon rounded-full mx-auto"></div>
           </div>
@@ -171,10 +170,10 @@ const EndToEndFlow = () => {
               transition={{ duration: 0.3 }}
             >
               <div className="bg-electric/10 rounded-2xl p-4 sm:p-6 mb-3 sm:mb-4 border border-electric/20 group-hover:bg-electric/20 transition-all duration-300">
-                <div className="text-3xl sm:text-4xl mb-2">🔄</div>
+                <div className="text-3xl sm:text-4xl mb-2">✅</div>
               </div>
-              <h4 className="text-lg sm:text-xl font-semibold text-electric mb-2">Gig Completion</h4>
-              <p className="text-slate-400 text-sm sm:text-base">Work gets done, payment flows</p>
+              <h4 className="text-lg sm:text-xl font-semibold text-electric mb-2">Verified Identity</h4>
+              <p className="text-slate-400 text-sm sm:text-base">BVN + NIN + Social = trust baseline before first gig</p>
             </motion.div>
 
             <motion.div
@@ -183,10 +182,10 @@ const EndToEndFlow = () => {
               transition={{ duration: 0.3 }}
             >
               <div className="bg-neon/10 rounded-2xl p-4 sm:p-6 mb-3 sm:mb-4 border border-neon/20 group-hover:bg-neon/20 transition-all duration-300">
-                <div className="text-3xl sm:text-4xl mb-2">📊</div>
+                <div className="text-3xl sm:text-4xl mb-2">🔄</div>
               </div>
-              <h4 className="text-lg sm:text-xl font-semibold text-neon mb-2">Data Generation</h4>
-              <p className="text-slate-400 text-sm sm:text-base">Transaction history builds</p>
+              <h4 className="text-lg sm:text-xl font-semibold text-neon mb-2">Gig Completion Loop</h4>
+              <p className="text-slate-400 text-sm sm:text-base">Work done → payment flows → ratings exchanged → passports update</p>
             </motion.div>
 
             <motion.div
@@ -197,14 +196,14 @@ const EndToEndFlow = () => {
               <div className="bg-electric/10 rounded-2xl p-4 sm:p-6 mb-3 sm:mb-4 border border-electric/20 group-hover:bg-electric/20 transition-all duration-300">
                 <div className="text-3xl sm:text-4xl mb-2">🚀</div>
               </div>
-              <h4 className="text-lg sm:text-xl font-semibold text-electric mb-2">Financial Access</h4>
-              <p className="text-slate-400 text-sm sm:text-base">Credit and savings unlocked</p>
+              <h4 className="text-lg sm:text-xl font-semibold text-electric mb-2">Financial Access Unlocked</h4>
+              <p className="text-slate-400 text-sm sm:text-base">Transaction data feeds AI → credit eligibility increases → new services unlock</p>
             </motion.div>
           </div>
 
           <div className="bg-gradient-to-r from-white/10 to-white/5 backdrop-blur-sm rounded-2xl p-6 sm:p-8 border border-white/10">
             <p className="text-slate-200 text-center text-base sm:text-lg italic leading-relaxed">
-              "Every completed gig builds financial identity, unlocking access to credit, savings, and insurance for Nigeria's informal economy."
+              "Every verified gig adds data to the economic passport. Start with zero credit history, end with real financial access — that's the compounding power of PassGig."
             </p>
           </div>
         </motion.div>

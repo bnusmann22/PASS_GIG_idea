@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import { Book, Users, Lightbulb, Target, ArrowRight, CheckCircle } from 'lucide-react';
+import { Book, Users, Lightbulb, Target, ArrowRight, CheckCircle, Shield } from 'lucide-react';
 
 const UXStory = () => {
   const storySections = [
@@ -22,20 +22,32 @@ const UXStory = () => {
       content: "PassGig bridges this gap by creating the first digital gig platform specifically designed for Nigeria's informal economy.",
       insights: [
         "Connects youth workers directly with traders",
-        "Builds financial identities from scratch",
-        "Leverages Squad API for secure payments",
-        "Creates data for AI credit scoring"
+        "Builds financial identities from scratch through verification and gigs",
+        "Leverages Squad API for secure payments and transaction data",
+        "Creates data trail that powers AI credit scoring"
       ]
     },
     {
       title: "The Solution",
       icon: Book,
       color: "electric",
-      content: "PassGig is a three-layer platform that transforms informal gig work into structured financial opportunities.",
+      content: "PassGig is a three-layer platform that transforms informal gig work into structured financial opportunity, with verification at the core.",
       insights: [
-        "Economic Passport: Digital profile that grows with activity",
+        "Economic Passport: Digital profile that grows with every gig",
         "AI Matching Engine: Finds best-fit gigs automatically",
-        "Financial Inclusion Loop: Transaction data unlocks credit"
+        "Financial Inclusion Loop: Transaction data unlocks credit and financial services"
+      ]
+    },
+    {
+      title: "Verification System",
+      icon: Shield,
+      color: "neon",
+      content: "We verify identity from scratch using layered signals, creating a trust foundation for users with no formal credit history.",
+      insights: [
+        "BVN: Connects to banking database, confirms financial identity baseline",
+        "NIN: Government-issued identifier, foundational identity proof",
+        "Social Media: Digital footprint and social credibility signals",
+        "Business Verification: Shop photos and operational evidence for traders"
       ]
     }
   ];
@@ -44,32 +56,56 @@ const UXStory = () => {
     {
       step: 1,
       user: "Youth Worker",
-      action: "Signs up, declares skills, gets initial AI passport score",
+      action: "Downloads app, declares skills, verifies BVN/NIN/social media. AI generates initial passport score.",
       outcome: "Profile created with trust score, ready for matching"
     },
     {
       step: 2,
       user: "Trader",
-      action: "Posts gig, deposits payment into Squad escrow",
+      action: "Signs up, verifies business, posts gig (e.g., 'Need delivery rider Saturday, ₦3,000')",
       outcome: "Gig published, matching engine activated"
     },
     {
       step: 3,
       user: "System",
-      action: "AI matches youth to trader based on skills, location, score",
-      outcome: "Top 5 candidates shown to trader"
+      action: "AI matching engine runs — ranks top 5 youth by skill, location, score, availability",
+      outcome: "Shortlist shown to trader with ranked candidates"
     },
     {
       step: 4,
       user: "Trader",
-      action: "Selects worker, work gets done, marks complete",
-      outcome: "Funds released to worker instantly"
+      action: "Selects worker, confirms gig, deposits payment into Squad escrow",
+      outcome: "Worker notified, payment secured in escrow"
     },
     {
       step: 5,
+      user: "Youth",
+      action: "Shows up, completes work",
+      outcome: "Trader marks gig complete in app"
+    },
+    {
+      step: 6,
+      user: "System",
+      action: "Squad API releases funds instantly to worker wallet",
+      outcome: "Worker receives payment, both prompted to rate"
+    },
+    {
+      step: 7,
       user: "Both Users",
-      action: "Rate each other, update scores",
-      outcome: "Financial profiles grow, credit eligibility increases"
+      action: "Submit mutual ratings (1-5 stars)",
+      outcome: "AI updates both passports, scores adjust"
+    },
+    {
+      step: 8,
+      user: "System",
+      action: "Transaction and rating data fed into intelligence layer",
+      outcome: "Credit eligibility recalculated, skill recommendations refresh"
+    },
+    {
+      step: 9,
+      user: "Platform",
+      action: "Financial service layer unlocks based on new passport strength",
+      outcome: "Micro-savings, credit lines, or business loans become available"
     }
   ];
 
@@ -93,12 +129,12 @@ const UXStory = () => {
             The PassGig UX Story
           </h2>
           <p className="text-lg sm:text-xl text-slate-400 max-w-4xl mx-auto leading-relaxed px-4">
-            How PassGig transforms Nigeria's informal economy into structured financial opportunity
+            How PassGig transforms Nigeria's informal economy into structured financial opportunity through verification, matching, and compounding financial growth
           </p>
         </motion.div>
 
         {/* Story Sections */}
-        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 mb-16 sm:mb-20">
+        <div className="grid sm:grid-cols-2 lg:grid-cols-2 gap-6 sm:gap-8 mb-16 sm:mb-20">
           {storySections.map((section, index) => (
             <motion.div
               key={index}
@@ -142,8 +178,11 @@ const UXStory = () => {
         >
           <div className="text-center mb-8 sm:mb-10">
             <h3 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-white mb-4">
-              The Complete User Journey
+              The Complete 9-Step User Journey
             </h3>
+            <p className="text-slate-400 mb-6 max-w-3xl mx-auto">
+              From signup to financial unlock — how verification, gig work, and payment flow build economic identity
+            </p>
             <div className="w-16 sm:w-24 h-1 bg-gradient-to-r from-electric to-neon rounded-full mx-auto"></div>
           </div>
 
@@ -188,20 +227,24 @@ const UXStory = () => {
           >
             <div className="text-center mb-4 sm:mb-6">
               <CheckCircle className="text-electric mx-auto mb-3 sm:mb-4" size={32} />
-              <h4 className="text-xl sm:text-2xl font-bold text-white mb-2">The Impact</h4>
+              <h4 className="text-xl sm:text-2xl font-bold text-white mb-2">The Compounding Impact</h4>
             </div>
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6">
+            <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 sm:gap-6">
               <div className="text-center">
                 <div className="text-2xl sm:text-3xl font-bold text-electric mb-2">13M+</div>
-                <p className="text-slate-300 text-sm sm:text-base">Unemployed youth can access gig opportunities</p>
+                <p className="text-slate-300 text-sm sm:text-base">Unemployed youth can access gig opportunities and build credit</p>
               </div>
               <div className="text-center">
                 <div className="text-2xl sm:text-3xl font-bold text-neon mb-2">60M+</div>
-                <p className="text-slate-300 text-sm sm:text-base">Micro-businesses get reliable workers</p>
+                <p className="text-slate-300 text-sm sm:text-base">Informal traders get reliable workers and business financing</p>
+              </div>
+              <div className="text-center">
+                <div className="text-2xl sm:text-3xl font-bold text-electric mb-2">∞</div>
+                <p className="text-slate-300 text-sm sm:text-base">Each gig strengthens financial profiles — compounding value with every transaction</p>
               </div>
             </div>
             <p className="text-slate-200 text-center mt-6 text-lg italic">
-              "Every completed gig builds financial identity, unlocking access to credit, savings, and insurance for Nigeria's informal economy."
+              "Every completed gig builds financial identity from zero, unlocking access to credit, savings, and insurance for Nigeria's informal economy."
             </p>
           </motion.div>
         </motion.div>

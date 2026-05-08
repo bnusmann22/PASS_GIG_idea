@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import { User, Briefcase, Target, TrendingUp } from 'lucide-react';
+import { User, Briefcase, Target, TrendingUp, Shield, Smartphone } from 'lucide-react';
 import { useState } from 'react';
 
 const TargetUsers = () => {
@@ -8,21 +8,41 @@ const TargetUsers = () => {
   const youthData = {
     title: 'Unemployed Youth',
     icon: User,
-    age: '18–30',
-    skills: 'Has skills but no proof',
-    location: 'Smartphone user, active on social media',
-    goal: 'Get gigs, build reputation, unlock financial access',
-    insights: '13M+ unemployed in Nigeria, ready for digital gig economy'
+    age: '18–30 years old',
+    skills: 'Has skills but no formal proof or work history',
+    location: 'Smartphone user, active on WhatsApp/Instagram/TikTok',
+    verification: 'BVN (bank identity) + NIN (government ID) + Social media (digital footprint + social credibility)',
+    goal: 'Get gigs → build passport score → unlock credit & savings',
+    insights: '13M+ unemployed in Nigeria, digitally native, ready for gig economy',
+    journey: [
+      'Signs up and declares skills (delivery, design, trades, etc.)',
+      'Completes three-layer verification (BVN + NIN + Social)',
+      'AI generates initial trust score based on verification completeness',
+      'Receives matched gig notifications based on skills, location, score',
+      'Completes gig → gets paid via Squad → receives rating',
+      'Passport score increases with each successful gig',
+      'After threshold, unlocks micro-credit, savings tools, certifications'
+    ]
   };
 
   const traderData = {
     title: 'Informal Traders & Artisans',
     icon: Briefcase,
-    age: 'Shop owners, tailors, mechanics',
-    skills: 'Has business but runs informally',
-    location: 'Needs reliable task workers',
-    goal: 'Find help, pay reliably, access business credit',
-    insights: 'Both customer and data source for financial profiles'
+    age: '25–65 years old',
+    skills: 'Runs business but informally — no payroll, no credit history',
+    location: 'Shop owners, tailors, mechanics, market sellers, artisans',
+    verification: 'BVN (personal financial baseline) + NIN (legal identity) + Business proof (shop photos, trade type, operational evidence)',
+    goal: 'Find reliable workers → secure payments → access business credit',
+    insights: '60M+ informal businesses, steady cash flow but no formal financial records',
+    journey: [
+      'Registers business, verifies identity with BVN + NIN',
+      'Posts gig needs (task type, date, pay, requirements)',
+      'Sees AI-ranked shortlist of 5 verified youth workers',
+      'Selects worker, deposits payment into Squad escrow',
+      'Worker completes task, trader marks gig complete',
+      'Squad releases payment instantly to worker',
+      'Builds transaction history → qualifies for working capital loans, business insurance'
+    ]
   };
 
   const activeData = activeUser === 'youth' ? youthData : traderData;
@@ -44,7 +64,10 @@ const TargetUsers = () => {
             Target Users
           </h2>
           <p className="text-lg sm:text-xl lg:text-2xl text-slate-400 font-light px-4">
-            Two Sides of One Ecosystem
+            Two Sides of One Economic Ecosystem
+          </p>
+          <p className="text-slate-400 mt-4 max-w-3xl mx-auto">
+            Both groups lack formal financial identity but have verifiable signals — together they create a complete economic picture
           </p>
         </motion.div>
 
@@ -73,19 +96,23 @@ const TargetUsers = () => {
             <ul className="space-y-3 text-slate-300">
               <li className="flex items-center">
                 <div className="w-1.5 h-1.5 bg-electric rounded-full mr-3"></div>
-                Age 18–30, smartphone user
+                Age 18–30, smartphone-savvy
               </li>
               <li className="flex items-center">
                 <div className="w-1.5 h-1.5 bg-electric rounded-full mr-3"></div>
-                Has skills but no proof of them
+                Has skills but no formal proof or employment history
               </li>
               <li className="flex items-center">
                 <div className="w-1.5 h-1.5 bg-electric rounded-full mr-3"></div>
-                Active on WhatsApp, Instagram, TikTok
+                Needs reliable gigs and a way to build financial credibility
               </li>
               <li className="flex items-center">
                 <div className="w-1.5 h-1.5 bg-electric rounded-full mr-3"></div>
-                Goal: Get gigs, build reputation, unlock financial access
+                Verifies via BVN + NIN + Social media (WhatsApp/Instagram/TikTok)
+              </li>
+              <li className="flex items-center">
+                <div className="w-1.5 h-1.5 bg-electric rounded-full mr-3"></div>
+                Outcome: Gigs → passport score → credit access → financial inclusion
               </li>
             </ul>
           </motion.div>
@@ -114,19 +141,23 @@ const TargetUsers = () => {
             <ul className="space-y-3 text-slate-300">
               <li className="flex items-center">
                 <div className="w-1.5 h-1.5 bg-neon rounded-full mr-3"></div>
-                Shop owners, tailors, mechanics, artisans
+                Shop owners, tailors, mechanics, market sellers
               </li>
               <li className="flex items-center">
                 <div className="w-1.5 h-1.5 bg-neon rounded-full mr-3"></div>
-                Has business but runs informally
+                Has steady cash flow but runs informally — no payroll system
               </li>
               <li className="flex items-center">
                 <div className="w-1.5 h-1.5 bg-neon rounded-full mr-3"></div>
-                Needs reliable task workers but has no hiring system
+                Needs reliable workers and a way to pay securely
               </li>
               <li className="flex items-center">
                 <div className="w-1.5 h-1.5 bg-neon rounded-full mr-3"></div>
-                Goal: Find help, pay reliably, access business credit
+                Verifies via BVN + NIN + Business proof (shop photos, trade type)
+              </li>
+              <li className="flex items-center">
+                <div className="w-1.5 h-1.5 bg-neon rounded-full mr-3"></div>
+                Outcome: Reliable hiring → transaction history → business loans & insurance
               </li>
             </ul>
           </motion.div>
@@ -156,20 +187,24 @@ const TargetUsers = () => {
             <div className="space-y-6">
               <h4 className="text-lg sm:text-xl lg:text-2xl font-semibold text-slate-200 flex items-center mb-4">
                 <Target className="mr-2 sm:mr-3 text-electric flex-shrink-0" size={20} />
-                Key Characteristics
+                Who They Are
               </h4>
               <div className="space-y-4">
                 <div className="bg-slate-800/50 rounded-xl p-4 border border-slate-700">
-                  <p className="text-slate-300 font-medium">Age & Reach</p>
+                  <p className="text-slate-300 font-medium">Profile</p>
                   <p className="text-slate-400">{activeData.age}</p>
                 </div>
                 <div className="bg-slate-800/50 rounded-xl p-4 border border-slate-700">
-                  <p className="text-slate-300 font-medium">Skills & Experience</p>
+                  <p className="text-slate-300 font-medium">Skills & Background</p>
                   <p className="text-slate-400">{activeData.skills}</p>
                 </div>
                 <div className="bg-slate-800/50 rounded-xl p-4 border border-slate-700">
                   <p className="text-slate-300 font-medium">Digital Presence</p>
                   <p className="text-slate-400">{activeData.location}</p>
+                </div>
+                <div className="bg-slate-800/50 rounded-xl p-4 border border-slate-700">
+                  <p className="text-slate-300 font-medium">Verification Process</p>
+                  <p className="text-slate-400">{activeData.verification}</p>
                 </div>
               </div>
             </div>
@@ -177,12 +212,21 @@ const TargetUsers = () => {
             <div className="space-y-6">
               <h4 className="text-lg sm:text-xl lg:text-2xl font-semibold text-slate-200 flex items-center mb-4">
                 <TrendingUp className="mr-2 sm:mr-3 text-neon flex-shrink-0" size={20} />
-                Goals & Insights
+                Journey & Goals
               </h4>
               <div className="bg-slate-800/50 rounded-xl p-6 border border-slate-700">
                 <p className="text-slate-300 leading-relaxed mb-4">{activeData.goal}</p>
                 <div className="border-t border-slate-600 pt-4">
-                  <p className="text-slate-400 italic text-sm">💡 {activeData.insights}</p>
+                  <p className="text-slate-400 italic text-sm mb-3">💡 {activeData.insights}</p>
+                  <div className="space-y-2 mt-4">
+                    <p className="text-slate-300 text-sm font-medium">Their path forward:</p>
+                    {activeData.journey.map((step, idx) => (
+                      <div key={idx} className="flex items-start space-x-2 text-sm">
+                        <span className="text-electric mt-1">→</span>
+                        <span className="text-slate-400">{step}</span>
+                      </div>
+                    ))}
+                  </div>
                 </div>
               </div>
             </div>

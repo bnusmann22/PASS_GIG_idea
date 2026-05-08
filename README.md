@@ -176,8 +176,10 @@ passgig/
 ```mermaid
 graph TD
     A[Youth Downloads App] --> B[Signs Up & Declares Skills]
-    B --> C[AI Creates Passport Score]
-    D[Trader Signs Up] --> E[Posts Gig Opportunity]
+    B --> V[Youth Verifies BVN, NIN, Social Media]
+    V --> C[AI Creates Passport Score]
+    D[Trader Signs Up] --> T[Trader Verifies BVN, NIN]
+    T --> E[Posts Gig Opportunity]
     E --> F[Deposits Payment to Squad Escrow]
     F --> G[AI Matching Engine Runs]
     G --> H[Top 5 Youth Shown to Trader]

@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import { UserPlus, Search, Brain, Layers, TrendingUp } from 'lucide-react';
+import { UserPlus, Search, Brain, Layers, TrendingUp, Shield } from 'lucide-react';
 import { useState } from 'react';
 
 const ArchitectureLayers = () => {
@@ -10,37 +10,40 @@ const ArchitectureLayers = () => {
       title: 'Onboarding & Economic Passport',
       icon: UserPlus,
       color: 'electric',
-      description: 'Every user creates a dynamic digital profile that grows with activity.',
+      description: 'Every user creates a dynamic digital profile that grows with every completed gig, payment, and rating.',
       details: [
-        'Youth: Full name, age, location, skills, portfolio, initial AI trust score',
-        'Traders: Business name, trade type, task needs, budget range, initial trust score',
-        'Passport updates in real-time with completed gigs, payments, and ratings'
+        'Youth: Full name, age, location, skills, portfolio, initial AI trust score based on verification',
+        'Traders: Business name, trade type, task needs, budget range, business trust score',
+        'Verification Layer: BVN + NIN + Social/business proof creates composite trust signal',
+        'Passport updates in real-time — it\'s a living financial identity, not static registration'
       ],
-      benefits: 'Living financial identity, not just static registration'
+      benefit: 'Living financial identity that starts from zero and compounds with usage'
     },
     {
-      title: 'Gig Matching Engine',
+      title: 'AI-Powered Gig Matching Engine',
       icon: Search,
       color: 'neon',
-      description: 'AI-powered matching system finds best-fit youth for trader gigs.',
+      description: 'Intelligent matching connects the right worker to the right gig based on multiple signals.',
       details: [
-        'Matching signals: Skill alignment, location proximity, passport score',
-        'Availability match, past gig ratings, category history',
-        'Trader deposits payment into Squad escrow, youth is notified'
+        'Matching signals: Skill alignment, location proximity, passport score (trustworthiness)',
+        'Filters: Availability, past gig ratings, category history, verification completeness',
+        'Trader deposits payment into Squad escrow upfront — worker sees "payment secured"',
+        'Top 5 ranked candidates shown to trader — data-driven, not guesswork'
       ],
-      benefits: 'Reliable connections between disconnected groups'
+      benefit: 'Reliable connections between disconnected groups — no more informal referrals'
     },
     {
       title: 'Intelligence & Financial Inclusion Loop',
       icon: Brain,
       color: 'electric',
-      description: 'Transaction data feeds AI models that unlock real financial services.',
+      description: 'Transaction data feeds AI models that unlock real financial services, creating a compounding system.',
       details: [
-        'Youth unlocks: Micro-savings, personal credit, skill certifications',
-        'Traders unlock: Working capital loans, business insurance, verified badges',
-        'Requirements: Consistent activity and positive behavioral signals'
+        'Every Squad payment generates transaction history — the raw material for credit scoring',
+        'Youth unlock: Micro-savings, personal credit lines, skill certifications as scores grow',
+        'Traders unlock: Working capital loans, business insurance, verified business badges',
+        'Unlocks progressive: More gigs → better data → more financial services → more opportunity'
       ],
-      benefits: 'Compounding system that gets more valuable with usage'
+      benefit: 'The system gets more valuable with every use — a true compounding loop'
     }
   ];
 
@@ -69,8 +72,7 @@ const ArchitectureLayers = () => {
             The Three Layers of PassGig
           </h2>
           <p className="text-lg sm:text-xl text-slate-400 max-w-4xl mx-auto leading-relaxed px-4">
-            Each layer feeds the next, creating a compounding system that builds financial identities
-            from scratch for Nigeria's informal economy.
+            Each layer feeds the next, creating a compounding system that builds financial identities from zero for Nigeria's informal economy.
           </p>
         </motion.div>
 
@@ -159,7 +161,7 @@ const ArchitectureLayers = () => {
                   <TrendingUp className={`${layers[activeLayer].color === 'electric' ? 'text-electric' : 'text-neon'}`} size={24} />
                 </div>
                 <p className="text-slate-200 text-lg leading-relaxed">
-                  {layers[activeLayer].benefits}
+                  {layers[activeLayer].benefit}
                 </p>
               </div>
             </div>
